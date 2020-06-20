@@ -1,35 +1,43 @@
-let layer = [];
-let img2;
+//let layer = [];
+//let img2;
 
-let r;
-let g;
-let b;
+//let r;
+//let g;
+//let b;
 
-let x;
+//let x;
 let c;
 
 let camX;
 let camY;
 
+let layer0;
+let layer1;
+let layer2;
+let layer3;
+let layer4;
+let layer5;
+let layer6;
+
 function preload() {
-  layer[0] = loadImage("assests/IMG_2009.png");
-  layer[1] = loadImage("assests/IMG_2008.png");
-  layer[2] = loadImage("assests/IMG_2010.png");
-  layer[3] = loadImage("assests/IMG_2011.png");
-  layer[4] = loadImage("assests/IMG_2007.png");
-  layer[5] = loadImage("assests/IMG_2006.png");
-  layer[6] = loadImage("assests/IMG_2005.png");
+  layer0 = loadImage("assests/IMG_2009.png");
+  layer1 = loadImage("assests/IMG_2008.png");
+  layer2 = loadImage("assests/IMG_2010.png");
+  layer3 = loadImage("assests/IMG_2011.png");
+  layer4 = loadImage("assests/IMG_2007.png");
+  layer5 = loadImage("assests/IMG_2006.png");
+  layer6 = loadImage("assests/IMG_2005.png");
 
 }
 
 function setup() {
  c =  createCanvas(windowWidth, windowHeight, WEBGL);
 
-  r = 65;
-  g = 160;
-  b = 255;
+ // r = 65;
+ // g = 160;
+ // b = 255;
   
-  x=0;
+ // x=0;
 
 }
 
@@ -51,30 +59,28 @@ function Drawing() {
   scale(0.4);
 
   translate(0, 0, -1000);
-  image(layer[6], 0,x);
+  image(layer6, 0,x);
 
   translate(0, 0, 180);
-  image(layer[5],0,x);
+  image(layer5,0,x);
 
 
   translate(0, 0, 150);
-  image(layer[4],0,0);
+  image(layer4,0,0);
 
   translate(0, 0, 120);
-  image(layer[3],0,0);
+  image(layer3,0,0);
 
   translate(0, 0, 100);
-  image(layer[1],0,0);
+  image(layer1,0,0);
 
   translate(0, 0, 50);
-  image(layer[2],0,0);
+  image(layer2,0,0);
 
   translate(0, 0, 0);
-  image(layer[0],0,0);
-
+  image(layer0,0,0);
 
   //x += tan(QUARTER_PI)*100; 
-
 
 }
 
