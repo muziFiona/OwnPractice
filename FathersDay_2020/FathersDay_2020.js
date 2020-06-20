@@ -1,103 +1,76 @@
-let layer =[];
+let layer = [];
 let img2;
 
 let r;
 let g;
 let b;
 
-let on = flase; 
+let x;
 
-function preload(){
-  layer[1]= loadImage("assests/IMG_2009.png");
-  layer[2]= loadImage("assests/IMG_2008.png");
-  layer[3]= loadImage("assests/IMG_2010.png");
-  layer[4]= loadImage("assests/IMG_2011.png");
-  layer[5]= loadImage("assests/IMG_2007.png");
-  layer[6]= loadImage("assests/IMG_2006.png");
-  layer[7]= loadImage("assests/IMG_2005.png");
-  
+
+function preload() {
+  layer[1] = loadImage("assests/IMG_2009.PNG");
+  layer[2] = loadImage("assests/IMG_2008.PNG");
+  layer[3] = loadImage("assests/IMG_2010.PNG");
+  layer[4] = loadImage("assests/IMG_2011.PNG");
+  layer[5] = loadImage("assests/IMG_2007.PNG");
+  layer[6] = loadImage("assests/IMG_2006.PNG");
+  layer[7] = loadImage("assests/IMG_2005.PNG");
+
 }
 
 function setup() {
-createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
 
-r= 65;
-g=160;
-b=255;
+  r = 65;
+  g = 160;
+  b = 255;
+  
+  x=0;
 
 }
 
 
 function draw() {
-background(r,g,b,255);
-orbitControl();
-Drawing();
-//changeCol();
-
+  background(65, 160, 255, 255);
+  orbitControl();
+  Drawing();
 }
 
-function Drawing(){
-  
-fill(0,0,0,0);
-tint(255,255);
+function Drawing() {
 
-noStroke();
-rectMode(CENTER);
-scale(0.4);
+  fill(0, 0, 0, 0);
+  tint(255, 255, 255, 255);
 
-translate(0,0,200);
+  noStroke();
+  rectMode(CENTER);
+  imageMode(CENTER);
+  scale(0.4);
 
-texture(layer[7]);
-rect(0,0,1000,1000);
+  translate(0, 0, -1000);
+  image(layer[7], 0,x);
 
-translate(0,0,180);
-texture(layer[6]);
-rect(0,0,1000,1000);
-
-translate(0,0,150);
-texture(layer[5]);
-rect(0,0,1000,1000);
-
-translate(0,0,120);
-texture(layer[4]);
-rect(0,0,1000,1000);
-
-translate(0,0,60);
-texture(layer[2]);
-rect(0,0,1000,1000);
-
-translate(0,0,100);
-texture(layer[3]);
-rect(0,0,1000,1000);
-
-translate(0,0,0);
-texture(layer[1]);
-rect(0,0,1000,1000);
-
-texture(layer[3]);
-
-//rotateY(HALF_PI);
-//translate(500,0,-500);
-//rect(0,0,1000,1000);
-
-//translate(0,0,1000);
-//rect(0,0,1000,1000);
+  translate(0, 0, 180);
+  image(layer[6],0,x);
 
 
-}
+  translate(0, 0, 150);
+  image(layer[5],0,0);
 
-function changeCol(){
-  if (on){
-  r = 160;
-  g = 65;
-  b = 200;
-} else {
-  r = 65;
-  g = 160;
-  b = 255;
-}
-}
+  translate(0, 0, 120);
+  image(layer[4],0,0);
 
-function mouseClicked(){
-  on = !on;
+  translate(0, 0, 100);
+  image(layer[2],0,0);
+
+  translate(0, 0, 50);
+  image(layer[3],0,0);
+
+  translate(0, 0, 0);
+  image(layer[1],0,0);
+
+
+  //x += tan(QUARTER_PI)*100; 
+
+
 }
