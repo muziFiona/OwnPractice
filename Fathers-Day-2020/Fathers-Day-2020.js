@@ -12,13 +12,13 @@ let camX;
 let camY;
 
 function preload() {
-  layer[1] = loadImage("assests/IMG_2009.png");
-  layer[2] = loadImage("assests/IMG_2008.png");
-  layer[3] = loadImage("assests/IMG_2010.png");
-  layer[4] = loadImage("assests/IMG_2011.png");
-  layer[5] = loadImage("assests/IMG_2007.png");
-  layer[6] = loadImage("assests/IMG_2006.png");
-  layer[7] = loadImage("assests/IMG_2005.png");
+  layer[0] = loadImage("assests/IMG_2009.png");
+  layer[1] = loadImage("assests/IMG_2008.png");
+  layer[2] = loadImage("assests/IMG_2010.png");
+  layer[3] = loadImage("assests/IMG_2011.png");
+  layer[4] = loadImage("assests/IMG_2007.png");
+  layer[5] = loadImage("assests/IMG_2006.png");
+  layer[6] = loadImage("assests/IMG_2005.png");
 
 }
 
@@ -51,26 +51,26 @@ function Drawing() {
   scale(0.4);
 
   translate(0, 0, -1000);
-  image(layer[7], 0,x);
+  image(layer[6], 0,x);
 
   translate(0, 0, 180);
-  image(layer[6],0,x);
+  image(layer[5],0,x);
 
 
   translate(0, 0, 150);
-  image(layer[5],0,0);
-
-  translate(0, 0, 120);
   image(layer[4],0,0);
 
-  translate(0, 0, 100);
-  image(layer[2],0,0);
-
-  translate(0, 0, 50);
+  translate(0, 0, 120);
   image(layer[3],0,0);
 
-  translate(0, 0, 0);
+  translate(0, 0, 100);
   image(layer[1],0,0);
+
+  translate(0, 0, 50);
+  image(layer[2],0,0);
+
+  translate(0, 0, 0);
+  image(layer[0],0,0);
 
 
   //x += tan(QUARTER_PI)*100; 
