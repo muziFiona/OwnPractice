@@ -6,21 +6,21 @@ let g;
 let b;
 
 let x;
-
+let c;
 
 function preload() {
-  layer[1] = loadImage("assests/IMG_2009.png");
-  layer[2] = loadImage("assests/IMG_2008.png");
-  layer[3] = loadImage("assests/IMG_2010.png");
-  layer[4] = loadImage("assests/IMG_2011.png");
-  layer[5] = loadImage("assests/IMG_2007.png");
-  layer[6] = loadImage("assests/IMG_2006.png");
-  layer[7] = loadImage("assests/IMG_2005.png");
+  layer[1] = loadImage("assests/IMG_2009.PNG");
+  layer[2] = loadImage("assests/IMG_2008.PNG");
+  layer[3] = loadImage("assests/IMG_2010.PNG");
+  layer[4] = loadImage("assests/IMG_2011.PNG");
+  layer[5] = loadImage("assests/IMG_2007.PNG");
+  layer[6] = loadImage("assests/IMG_2006.PNG");
+  layer[7] = loadImage("assests/IMG_2005.PNG");
 
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+ c =  createCanvas(windowWidth, windowHeight, WEBGL);
 
   r = 65;
   g = 160;
@@ -33,7 +33,7 @@ function setup() {
 
 function draw() {
   background(65, 160, 255, 255);
-  orbitControl();
+  //orbitControl();
   Drawing();
 }
 
@@ -73,4 +73,12 @@ function Drawing() {
   //x += tan(QUARTER_PI)*100; 
 
 
+}
+
+function mouseDragged(){ //to create a kind of 3D feeling 
+  //allows users to drag the page and move x axis angle
+  let camX = map(mouseX, 0, width, -400, 400);
+  let camY = map(mouseY, 0, height, -400, 400);
+  camera(camX,camY,(height/2)/tan(PI/6),0,0,0,0,1,0);
+  
 }
