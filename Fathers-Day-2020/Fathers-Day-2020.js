@@ -56,9 +56,9 @@ function Drawing() {
   noStroke();
   rectMode(CENTER);
   imageMode(CENTER);
-  scale(0.4);
+  //scale(0.4);
 
-  translate(0, 0, -1000);
+  translate(0, 0, 100);//-1000
   image(layer6, 0,x);
 
   translate(0, 0, 180);
