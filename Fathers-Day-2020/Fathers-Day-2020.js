@@ -5,7 +5,7 @@
 //let g;
 //let b;
 
-//let x;
+let x;
 let c;
 
 let camX;
@@ -37,7 +37,7 @@ function setup() {
  // g = 160;
  // b = 255;
   
- // x=0;
+  x=0;
 
 }
 
