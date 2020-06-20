@@ -58,7 +58,7 @@ function Drawing() {
   imageMode(CENTER);
   //scale(0.4);
 
-  translate(0, 0, 100);//-1000
+  translate(0, 0, -1000);//-1000
   image(layer6, 0,x);
 
   translate(0, 0, 180);
@@ -84,10 +84,10 @@ function Drawing() {
 
 }
 
-//function mouseDragged(){ //to create a kind of 3D feeling 
+function mouseDragged(){ //to create a kind of 3D feeling 
   //allows users to drag the page and move x axis angle
-//  camX = map(mouseX, 0, width, -400, 400);
-//  camY = map(mouseY, 0, height, -400, 400);
-//  camera(camX,camY,(height/2)/tan(PI/6),0,0,0,0,1,0);
+  camX = map(mouseX, 0, width, -400, 400);
+  camY = map(mouseY, 0, height, -400, 400);
+  camera(camX,camY,(height/2)/tan(PI/6),0,0,0,0,1,0);
   
-//}
+}
