@@ -20,13 +20,13 @@ let layer5;
 let layer6;
 
 function preload() {
-  layer0 = loadImage('assests/IMG_2009.png');
-  layer1 = loadImage('assests/IMG_2008.png');
-  layer2 = loadImage('assests/IMG_2010.png');
-  layer3 = loadImage('assests/IMG_2011.png');
-  layer4 = loadImage('assests/IMG_2007.png');
-  layer5 = loadImage('assests/IMG_2006.png');
-  layer6 = loadImage('assests/IMG_2005.png');
+  layer0 = loadImage('assests/IMG_2009.PNG');
+  layer1 = loadImage('assests/IMG_2008.PNG');
+  layer2 = loadImage('assests/IMG_2010.PNG');
+  layer3 = loadImage('assests/IMG_2011.PNG');
+  layer4 = loadImage('assests/IMG_2007.PNG');
+  layer5 = loadImage('assests/IMG_2006.PNG');
+  layer6 = loadImage('assests/IMG_2005.PNG');
 
 }
 
